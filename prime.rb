@@ -1,14 +1,8 @@
-def prime?(x)
-  if x == 1
-    return true 
-  elsif x < 1
-    return false
-  else
-  for y in 2..(x-1)
-    if (x % y) == 0
-      return false 
-    end
-  end 
-end
-   true
+def prime?(num)
+  n = 2
+  while n < num
+    return false if num % n == 0
+    n += 1
+  end
+  true
 end
